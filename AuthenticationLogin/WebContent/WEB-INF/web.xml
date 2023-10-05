@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>AuthenticationLogin</display-name>
+ <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+  </servlet-mapping>
+ <servlet>
+  <servlet-name>LoginFilter</servlet-name>
+  <servlet-class>com.Authentication.LoginFilter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LoginFilter</servlet-name>
+  <url-pattern>/servlet/app.LoginFilterTest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>HomePage</servlet-name>
+  <servlet-class>com.Authentication.HomePage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>HomePage</servlet-name>
+  <url-pattern>/servlet/app.HomepageTest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>EmailServletTest</servlet-name>
+  <servlet-class>com.admission.EmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EmailServletTest</servlet-name>
+  <url-pattern>/servlet/app.EmailServletTest</url-pattern>
+  </servlet-mapping>
+</web-app>
